@@ -10,13 +10,15 @@
         android:layout_height="match_parent" />
 
     <com.luciferldy.viewpagerindicator.ViewPagerIndicator
+        android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="50dip"
         android:layout_marginBottom="20dip"
         android:layout_gravity="bottom"
         app:indicator_size="8dip"
         app:indicator_distance="12dip"
-        app:indicator_count="5"/>
-
+        app:indicator_count="5"
+        app:indicator_normal_color="@color/md_white"
+        app:indicator_selected_color="@color/md_grey_700"/>
 
 </FrameLayout>

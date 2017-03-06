@@ -1,15 +1,14 @@
-package com.luciferldy.viewpagerindicator.simple;
+package com.luciferldy.viewpagerindicator.sample;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.net.Uri;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager pager = (ViewPager) findViewById(R.id.pager);
-        final ViewPagerIndicator indicator = new ViewPagerIndicator(getBaseContext());
+        final ViewPagerIndicator indicator = (ViewPagerIndicator) findViewById(R.id.indicator);
         SimplePagerAdapter adapter = new SimplePagerAdapter(pager.getContext());
         pager.setAdapter(adapter);
         pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -50,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         pager.setCurrentItem(0);
+
+        DisplayMetrics metrics = new DisplayMetrics();
+        getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
     }
 
     class SimplePagerAdapter extends PagerAdapter {

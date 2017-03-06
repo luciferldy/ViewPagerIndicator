@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Lucifer on 2017/3/5.
- * @email lian_dy@foxmail.com
+ * E-mail: lian_dy@foxmail.com
  */
 
 public class ViewPagerIndicator extends View {
@@ -85,8 +85,8 @@ public class ViewPagerIndicator extends View {
     }
 
     /**
-     * 设置当前的位置
-     * @param position 位置的索引
+     * Set the current position
+     * @param position index of position
      */
     public void setCurrentPosition(int position) {
         if (position >= mPoints.size())
@@ -96,10 +96,10 @@ public class ViewPagerIndicator extends View {
     }
 
     /**
-     * 移动 indicator
-     * @param position 位置的 index
-     * @param positionOffset 偏移的比例
-     * @param positionOffsetPixels 偏移的像素
+     * move indicator
+     * @param position index of position
+     * @param positionOffset offset percent float between 0 and 1
+     * @param positionOffsetPixels offset pixels
      */
     public void moveIndicator(int position, float positionOffset, float positionOffsetPixels) {
         Log.i(LOG_TAG, "moveIndicator position = " + position + ", point size = " + mPoints.size());
@@ -113,7 +113,7 @@ public class ViewPagerIndicator extends View {
     }
 
     /**
-     * 初始化
+     * init
      */
     private void init() {
         Log.i(LOG_TAG, "init");

@@ -1,4 +1,4 @@
-package com.luciferldy.viewpagerindicator.simple;
+package com.luciferldy.viewpagerindicator.sample;
 
 import android.app.Application;
 
