@@ -11,6 +11,11 @@ A simple indicator library for Android ViewPager like in Zhihutoday
 ### Gradle
 
 ```groovy
+repositories {
+	maven {
+	    url 'https://dl.bintray.com/luciferldy/maven/'
+	}
+}
 dependencies {
 	compile 'com.luciferldy.viewpagerindicator:viewpagerindicator:1.0.0'
 }
